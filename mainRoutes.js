@@ -3,6 +3,7 @@
     var Router=express.Router();
     var portController = require('./Controllers/portController');
     var execBashController=require('./Controllers/execBashController');
+    var CompileController=require('./Controllers/CompileController');
     Router.get('/testConnection',function (req,res) {
        res.send("Connection Successful");
     });
@@ -15,5 +16,8 @@
     });
     Router.post('./execBash',function (req,res) {
         execBashController.execBash(req,res);
+    });
+    Router.post('/compile',function (req,res) {
+        CompileController.writeCodeToFile(req,res);
     });
 })();

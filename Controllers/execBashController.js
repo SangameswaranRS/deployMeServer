@@ -1,5 +1,4 @@
 (function () {
-    var sys=require('system');
     var exec=require('child_process').exec;
     module.exports.execBash=function (req,res) {
         var child;
