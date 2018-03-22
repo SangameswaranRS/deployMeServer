@@ -7,6 +7,7 @@
                 statusCode:500,
                 message:err.message
             };
+            console.log(err.message);
             res.status(500).send(errorJson);
         }else{
             var successJson={
